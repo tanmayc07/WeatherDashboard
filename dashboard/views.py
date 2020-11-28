@@ -7,6 +7,7 @@ from .helper import get_weather_data
 
 def home(request):
     form = CityForm()
+
     if request.method == 'POST':
         form = CityForm(request.POST)
         if form.is_valid():
@@ -24,4 +25,12 @@ def home(request):
 
 
 def history(request):
-    return HttpResponse("hello")
+    template_name = 'history.html'
+    cities = CityModel.objects.all().order_by('-date_added')[:5]
+    weather_data_list = []
+    for city in cities:
+        weather_data_list.append(get_weather_data(city.city_name))
+    context = {
+        'weather_data_list': weather_data_list
+    }
+    return render(request, template_name, context)

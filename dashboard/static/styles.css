@@ -19,10 +19,21 @@ input {
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: soft-light;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 767px) {
   #sideform {
     min-height: 96vh;
   }
+
+  .card {
+    max-width: 40vw;
+  }
+}
+
+.footer-main {
+  position: fixed !important;
+  bottom: 0px !important;
+  width: 100%;
 }
