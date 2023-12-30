@@ -21,6 +21,7 @@ def home(request):
 
     template_name = 'home.html'
     context = {'form': form, 'weather_data': weather_data}
+    print(context)
     return render(request, template_name, context)
 
 

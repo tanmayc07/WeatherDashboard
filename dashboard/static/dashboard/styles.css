@@ -1,0 +1,39 @@
+#sideform {
+  background: linear-gradient(#f96c6c, #fff) !important;
+}
+
+#sideform p {
+  font-size: 1.4rem;
+}
+
+.btn,
+input {
+  border-radius: 20px !important;
+}
+
+.card {
+  min-width: 30vw !important;
+  background-color: transparent;
+  background: url(rainbow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: soft-light;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 767px) {
+  #sideform {
+    min-height: 96vh;
+  }
+
+  .card {
+    max-width: 40vw;
+  }
+}
+
+.footer-main {
+  position: fixed !important;
+  bottom: 0px !important;
+  width: 100%;
+}
